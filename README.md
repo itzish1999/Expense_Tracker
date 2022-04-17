@@ -30,3 +30,20 @@ You will also want to INNER JOIN the tables as well. To do so:
 select * from users INNER JOIN expense_tracker ON users.id = 2;
 
 you should see your user row in the results!
+
+4/17/22 UPDATE:
+
+Submitted in User Login and Signup pages UI with React and bootstrap.
+
+Added in a new column in the users table named: lastname
+altered column - name to: firstname
+
+To do so:
+ALTER TABLE users
+ADD COLUMN lastname VARCHAR (30);
+
+ALTER TABLE users
+RENAME COLUMN name TO firstname;
+
+To check changes; 
+SELECT * FROM users;
