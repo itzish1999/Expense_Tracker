@@ -3,8 +3,8 @@ const pool = new Pool({
     server: 'localhost',
     database: 'epense_user_db',
     port: '5432',
-    username: 'ismaeel',
-    password: 'pass',
+    username: '',
+    password: 'Alpha123Beta456Charlie789',
     
 });
 

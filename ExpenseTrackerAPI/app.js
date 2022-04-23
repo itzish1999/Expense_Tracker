@@ -9,7 +9,10 @@ app.use(
         extended: true,
     })
 );
-app.get('/', helloController);
+app.get('/', (req, res) => {
+    console.log("Hello World")
+    res.send("Hello World!")
+});
 
 app.get('/users', (req, res) => {
     console.log('User Page')
