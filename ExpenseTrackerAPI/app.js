@@ -62,7 +62,7 @@ app.delete("/users/:id", async (req, res) => {
     } catch (err) {
         console.error(err.message);
     }
-})
+});
 
 app.listen(8080, () => {
     console.log('Node server running on port 8080');

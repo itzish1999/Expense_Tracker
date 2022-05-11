@@ -1,16 +1,16 @@
 import React from "react";
 import axios from "axios";
 
-export default class PersonList extends Component {
+export default class UserList extends React.Component {
   state = {
-    persons: []
+    users: []
   }
 
   componentDidMount() {
-    axios.get(`/users/:id`)
+    axios.get(`http://localhost3000/users/:id`)
       .then(res => {
-        const persons = res.data;
-        this.setState({ persons });
+        const users = res.data;
+        this.setState({ users });
       })
   }
 
@@ -18,9 +18,9 @@ export default class PersonList extends Component {
     return (
       <ul>
         {
-          this.state.persons
-            .map(person =>
-              <li key={person.id}>{person.name}</li>
+          this.state.users
+            .map(user =>
+              <li key={user.id}>{user.firstname}{user.lastname}{user.email}{user.password}</li>
             )
         }
       </ul>
